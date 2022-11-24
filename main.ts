@@ -3,9 +3,23 @@ radio.onReceivedString(function (receivedString) {
     serial.writeValue("x", signal)
     serial.writeValue("map", Math.map(signal, -128, -42, 0, 9))
     led.plotBarGraph(
-    Math.map(signal, -128, -42, 0, 5),
-    5
+    Math.map(signal, -128, -42, 0, 9),
+    9
     )
+    if (true) {
+        if (-128 != signal) {
+        	
+        }
+    } else {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+        basic.pause(5)
+    }
 })
 let signal = 0
 radio.setGroup(1)
