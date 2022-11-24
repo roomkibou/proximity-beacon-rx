@@ -7,6 +7,7 @@ radio.onReceivedString(function (receivedString) {
     9
     )
     if (true) {
+        radio.setTransmitSerialNumber(true)
         if (-128 != signal) {
         	
         }
